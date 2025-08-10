@@ -1,0 +1,13 @@
+CSS Variables for Theming – The :root defines color variables (--bg-color-header, --bg-color-footer, --bg-color-nav, --bg-color-main) that make it easy to change the theme.
+
+Dark Mode Toggle – An <input type="checkbox"> (#theme-switch) is used to switch between light and dark themes by changing CSS variables when checked.
+
+CSS Grid Layout – The main <div> with display: grid arranges the layout into two columns (200px sidebar + main area) and three rows (header, content, footer).
+
+Header Spanning – The <header> spans both columns (grid-column: 1 / span 2), displaying the dashboard title and the dark mode toggle label side-by-side with flexbox.
+
+Sidebar Navigation (<nav>) – The left column contains navigation links (Home, Users, Settings) styled with a background color variable.
+
+Main Content Area (<main>) – The right column holds the dashboard’s primary content area for charts, tables, or reports, using the --bg-color-main variable for background.
+
+Footer Spanning – The <footer> also spans both columns, is centered, and changes color with the theme toggle using the same CSS variable system.
