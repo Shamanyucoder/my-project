@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Bank UI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 300px;
+    }
+    .balance {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #38761d;
+      font-weight: bold;
+    }
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+    }
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      background: #007bff;
+      color: #fff;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+      width: 100%;
+    }
+    .btn:hover { background: #0056b3; }
+    .deposit-btn { background-color: #38761d; }
+    .withdraw-btn { background-color: #cc0000; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="balance" id="balance">$0</div>
+    <div class="actions">
+      <button type="button" class="btn deposit-btn">Deposit</button>
+      <button type="button" class="btn withdraw-btn">Withdraw</button>
+    </div>
+  </main>
+</body>
+</html>
