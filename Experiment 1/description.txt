@@ -1,0 +1,9 @@
+Shows a heading Student Registration Form.
+
+Field for Name  at least 3 letters, only alphabets,spaces, required.
+
+Field for Email  must be a valid email format, required.
+
+Field for Age  number between 18 and 25, required.
+
+Register button to submit the form.

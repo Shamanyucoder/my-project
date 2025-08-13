@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Character Counter</title>
+    <style>
+        .counter-box {
+            border: 2px solid #222;
+            margin: 10px 0;
+            padding: 20px;
+        }
+        .counter-title {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            font-size: 1.2em;
+            font-family: 'Courier New', Courier, monospace;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        .char-count {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter-box">
+        <div class="counter-title">Live Character Counter</div>
+        <textarea id="textarea1" placeholder="Start typing..."></textarea>
+        <div class="char-count">Characters: <span id="count1">0</span></div>
+    </div>
+
+    <div class="counter-box">
+        <div class="counter-title">Live Character Counter</div>
+        <textarea id="textarea2">Hello from ByteXL</textarea>
+        <div class="char-count">Characters: <span id="count2">17</span></div>
+    </div>
+
+    <script>
+        function updateCount(textareaId, countId) {
+            const textarea = document.getElementById(textareaId);
+            const count = document.getElementById(countId);
+            count.textContent = textarea.value.length;
+            textarea.addEventListener('input', function() {
+                count.textContent = textarea.value.length;
+            });
+        }
+
+        updateCount('textarea1', 'count1');
+        updateCount('textarea2', 'count2');
+    </script>
+</body>
+</html>
