@@ -1,9 +1,6 @@
 HTML shows the balance and two buttons (Deposit, Withdraw).
 CSS makes it centered and colors the buttons.
 Keeps track of money in balance.
-Deposit adds money.
-Withdraw takes money if enough.
-Updates balance shown on screen.
 body – Centers everything, light grey background, clean font.
 card – White box with padding, rounded corners, shadow.
 balance – Big, bold, green text for money.
