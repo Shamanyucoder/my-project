@@ -5,18 +5,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Bank UI</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+
+        .balance {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background: #007bff;
+            color: #fff;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
 </head>
 
 <body>
 
     <main class="card">
-        <div class="balance">$0</div>
+        <div class="balance" id="balance">$0</div>
         <div class="actions">
             <button class="btn deposit-btn">Deposit</button>
             <button class="btn withdraw-btn">Withdraw</button>
         </div>
     </main>
+
+    <script>
+        let balance = 0;
+        const balanceDisplay = document.getElementById('balance');
+
+        document.querySelector('.deposit-btn').addEventListener('click', () => {
+            let amount = parseFloat(prompt("Enter deposit amount:"));
+            if (!isNaN(amount) && amount > 0) {
+                balance += amount;
+                updateBalance();
+            } else {
+                alert("Invalid amount.");
+            }
+        });
+
+        document.querySelector('.withdraw-btn').addEventListener('click', () => {
+            let amount = parseFloat(prompt("Enter withdraw amount:"));
+            if (!isNaN(amount) && amount > 0) {
+                if (amount <= balance) {
+                    balance -= amount;
+                    updateBalance();
+                } else {
+                    alert("Insufficient funds.");
+                }
+            } else {
+                alert("Invalid amount.");
+            }
+        });
+
+        function updateBalance() {
+            balanceDisplay.textContent = `$${balance.toFixed(2)}`;
+        }
+    </script>
 
 </body>
 
