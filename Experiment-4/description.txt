@@ -1,0 +1,9 @@
+There are two text boxes where you can type
+
+Under each box it shows how many characters you have typed
+
+As soon as you type or delete something the number updates instantly
+
+The first box starts empty
+
+The second box already has the text Hello from ByteXL in 17 characters
