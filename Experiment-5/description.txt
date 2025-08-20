@@ -1,0 +1,11 @@
+The page has a box that shows a product list
+
+There is a dropdown menu where you can choose a category: All, Clothing, Electronics, or Books.
+
+A list of products is stored in JavaScript (T-Shirt, Jeans, Headphones).
+
+When the page first loads, it shows all products.
+
+If you select a category from the dropdown, the list updates to show only products in that category.
+
+The CSS part just adds styles (like borders, padding, and background color) to make it look neat.
