@@ -1,0 +1,15 @@
+HTML Setup  Creates a webpage with a title and a blank drawing area using svg.
+
+CSS Styling  Adds borders, white background, and crosshair cursor for the drawing box.
+
+JavaScript Logic  Controls the drawing.
+
+mousedown  start drawing a new line.
+
+mousemove  extend the line as the mouse moves.
+
+mouseup and mouseleave stop drawing.
+
+Path Drawing  Uses SVG path to connect points and create freehand lines.
+
+Mouse Position Function  Ensures lines are drawn exactly where the mouse is inside the box.

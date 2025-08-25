@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SVG Drawing Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin: 20px;
+        }
+        .drawing-area {
+            border: 2px solid #444;
+            background: #fff;
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px;
+        }
+        .drawing-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        svg {
+            border: 2px solid #888;
+            background: #fff;
+            cursor: crosshair;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="drawing-title">SVG Drawing Tool</div>
+        <div class="drawing-area">
+            <svg id="svgCanvas" width="600" height="400"></svg>
+        </div>
+    </div>
+    <script>
+        const svg = document.getElementById('svgCanvas');
+        let drawing = false;
+        let currentPath = null;
+
+        svg.addEventListener('mousedown', (e) => {
+            drawing = true;
+            const pt = getMousePosition(e);
+            currentPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            currentPath.setAttribute('stroke', '#2196f3');
+            currentPath.setAttribute('stroke-width', '2');
+            currentPath.setAttribute('fill', 'none');
+            currentPath.setAttribute('d', `M${pt.x},${pt.y}`);
+            svg.appendChild(currentPath);
+        });
+
+        svg.addEventListener('mousemove', (e) => {
+            if (!drawing || !currentPath) return;
+            const pt = getMousePosition(e);
+            let d = currentPath.getAttribute('d');
+            d += ` L${pt.x},${pt.y}`;
+            currentPath.setAttribute('d', d);
+        });
+
+        svg.addEventListener('mouseup', () => {
+            drawing = false;
+            currentPath = null;
+        });
+
+        svg.addEventListener('mouseleave', () => {
+            drawing = false;
+            currentPath = null;
+        });
+
+        function getMousePosition(evt) {
+            const rect = svg.getBoundingClientRect();
+            return {
+                x: evt.clientX - rect.left,
+                y: evt.clientY - rect.top
+            };
+        }
+    </script>
+</body>
+</html>
