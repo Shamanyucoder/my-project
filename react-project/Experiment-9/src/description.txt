@@ -1,0 +1,9 @@
+Make a Person class with basic details (like name and age) and a method to show them.
+
+Create a Student class that extends Person and adds extra info (like grade or course).
+
+Create a Teacher class that extends Person and adds extra info (like subject or department).
+
+Both Student and Teacher should have methods to show full details (using and overriding Person’s method).
+
+Finally, create examples of Student and Teacher to demonstrate inheritance and method overriding.
