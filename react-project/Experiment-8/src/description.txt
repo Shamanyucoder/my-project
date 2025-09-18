@@ -1,0 +1,7 @@
+At the top, you can search books by title or author.
+
+You can also add new books by typing the title and author.
+
+The list shows all added books, each with a Remove button to delete it.
+
+In the example, typing “great” in the search box shows only The Great Gatsby.
