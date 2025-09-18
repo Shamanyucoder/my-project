@@ -1,35 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+// Base Person class
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+  displayInfo() {
+    return `Name: ${this.name}, Age: ${this.age}`;
+  }
 }
 
-export default App
+// Student subclass
+class Student extends Person {
+  constructor(name, age, grade) {
+    super(name, age);
+    this.grade = grade;
+  }
+
+  displayInfo() {
+    return `${super.displayInfo()}, Grade: ${this.grade}`;
+  }
+}
+
+// Teacher subclass
+class Teacher extends Person {
+  constructor(name, age, subject) {
+    super(name, age);
+    this.subject = subject;
+  }
+
+  displayInfo() {
+    return `${super.displayInfo()}, Subject: ${this.subject}`;
+  }
+}
+
+function App() {
+  // Create instances
+  const student = new Student("Alice", 20, "A");
+  const teacher = new Teacher("Mr. Smith", 40, "Mathematics");
+
+  return (
+    <div>
+      <h2>Person Class Hierarchy Demo</h2>
+      <p><strong>Student:</strong> {student.displayInfo()}</p>
+      <p><strong>Teacher:</strong> {teacher.displayInfo()}</p>
+    </div>
+  );
+}
+
+export default App;

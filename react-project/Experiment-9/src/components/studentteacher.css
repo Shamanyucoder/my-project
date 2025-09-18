@@ -1,0 +1,32 @@
+.person-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    max-width: 400px;
+}
+
+.person-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2d3a4b;
+    margin-bottom: 8px;
+}
+
+.person-info {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 4px;
+}
+
+.student-grade {
+    color: #1976d2;
+    font-weight: 500;
+}
+
+.teacher-subject {
+    color: #388e3c;
+    font-weight: 500;
+}
