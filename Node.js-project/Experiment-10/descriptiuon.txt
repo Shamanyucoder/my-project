@@ -1,0 +1,11 @@
+Employees are stored in memory (default: Alice, Bob, Charlie).
+
+It shows a menu in the terminal where you can:
+
+Add Employee → enter name & ID, it gets added to the list
+
+List Employees → shows all employees with name & ID
+
+Remove Employee → enter ID to remove an employee
+
+Exit → quit the program
