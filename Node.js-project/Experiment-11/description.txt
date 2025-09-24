@@ -1,0 +1,13 @@
+It starts a server on http://localhost:3000.
+
+It has an in-memory list of playing cards (Ace of Hearts, King of Spades, Queen of Diamonds).
+
+You can:
+
+See all cards → GET /cards
+
+See one card by ID → GET /cards/:id
+
+Add a new card → POST /cards with suit and value in the body
+
+Delete a card by ID → DELETE /cards/:id

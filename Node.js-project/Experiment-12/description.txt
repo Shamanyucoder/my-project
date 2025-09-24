@@ -1,0 +1,13 @@
+It starts a server on http://localhost:3000.
+
+Seats are stored in memory (5 seats, all available at first).
+
+Features:
+
+View seats → GET /seats
+
+Lock a seat → POST /lock/:id (temporarily holds a seat for a user for 10 sec)
+
+Confirm booking → POST /confirm/:id (user must confirm before lock expires)
+
+Auto-unlock → locked seats become available again if not confirmed in 10 sec
