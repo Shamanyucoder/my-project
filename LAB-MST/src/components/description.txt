@@ -1,0 +1,13 @@
+The app allows users to add destinations with details — ID, place, and country.
+
+Each destination is stored in a list displayed on the screen.
+
+The user can delete any destination from the list using a Delete button.
+
+The app uses React useState hooks to manage data dynamically.
+
+Vite is used as the development tool for fast React setup.
+
+App.css and index.css handle the overall layout and styling.
+
+The UI is simple, clean, and responsive for easy interaction.
